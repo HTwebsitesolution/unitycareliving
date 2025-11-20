@@ -33,14 +33,14 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center space-x-4 group">
               <Image
                 src="/logo.png"
                 alt="Unity Care Living logo"
-                width={48}
-                height={48}
+                width={72}
+                height={72}
                 priority
-                className="w-12 h-12 object-contain"
+                className="w-16 h-16 object-contain drop-shadow-md"
               />
               <div>
                 <span className="text-2xl font-bold text-primary-700 block group-hover:text-primary-800 transition">
@@ -52,17 +52,24 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-primary-700 transition font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-primary-700 transition font-medium">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-700 hover:text-primary-700 transition font-medium">
-              Services
-            </Link>
-            <Link href="/contact-us" className="text-gray-700 hover:text-primary-700 transition font-medium">
+          <div className="hidden md:flex items-center space-x-4">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/services', label: 'Services' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative inline-flex items-center rounded-full border border-transparent px-4 py-2 text-sm font-semibold uppercase tracking-wide text-primary-700/80 transition hover:border-primary-200 hover:bg-primary-50/80 hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-200 focus-visible:ring-offset-2"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact-us"
+              className="inline-flex items-center rounded-full bg-primary-600 px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary-900/20 transition hover:bg-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-600"
+            >
               Contact Us
             </Link>
           </div>
@@ -85,17 +92,24 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2">
-            <Link href="/" className="block py-2 text-gray-700 hover:text-primary-700 transition">
-              Home
-            </Link>
-            <Link href="/about" className="block py-2 text-gray-700 hover:text-primary-700 transition">
-              About
-            </Link>
-            <Link href="/services" className="block py-2 text-gray-700 hover:text-primary-700 transition">
-              Services
-            </Link>
-            <Link href="/contact-us" className="block py-2 text-gray-700 hover:text-primary-700 transition">
+          <div className="md:hidden mt-4 pb-4 space-y-3">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/services', label: 'Services' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block rounded-xl border border-primary-100 px-4 py-3 text-sm font-semibold uppercase tracking-wide text-primary-800 transition hover:bg-primary-50"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact-us"
+              className="block rounded-xl bg-primary-600 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-primary-900/20 transition hover:bg-primary-500"
+            >
               Contact Us
             </Link>
           </div>

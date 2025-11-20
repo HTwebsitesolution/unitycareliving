@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -31,11 +32,23 @@ export default function Header() {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div>
-            <Link href="/" className="text-2xl font-bold text-primary-700 block">
-              Unity Care Living
+          <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3 group">
+              <Image
+                src="/logo.png"
+                alt="Unity Care Living logo"
+                width={48}
+                height={48}
+                priority
+                className="w-12 h-12 object-contain"
+              />
+              <div>
+                <span className="text-2xl font-bold text-primary-700 block group-hover:text-primary-800 transition">
+                  Unity Care Living
+                </span>
+                <p className="text-sm text-gray-600 italic mt-1">Our Space. Our Home.</p>
+              </div>
             </Link>
-            <p className="text-sm text-gray-600 italic mt-1">Our Space. Our Home.</p>
           </div>
 
           {/* Desktop Menu */}

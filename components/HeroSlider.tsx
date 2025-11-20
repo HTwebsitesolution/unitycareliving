@@ -113,7 +113,7 @@ export default function HeroSlider() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-24">
-        <div className="max-w-3xl space-y-6 fade-in">
+        <div className="max-w-3xl space-y-6 fade-in animate">
           <p className="inline-block rounded-full bg-white/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.2em]">
             {slides[activeIndex].eyebrow}
           </p>

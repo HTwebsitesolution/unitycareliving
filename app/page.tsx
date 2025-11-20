@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroSlider from '@/components/HeroSlider'
+import Reveal from '@/components/Reveal'
 
 export default function Home() {
   return (
@@ -8,16 +9,16 @@ export default function Home() {
       <HeroSlider />
 
       {/* Services Section */}
-      <section className="py-20 bg-white fade-up">
+      <Reveal as="section" className="py-20 bg-white fade-up">
         <div className="container mx-auto px-4">
           <div className="grid max-w-6xl mx-auto gap-12 md:grid-cols-2 md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-500 mb-4">
                 Everything Needed To Thrive
               </p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6 fade-up-delayed">
+              <Reveal as="h2" className="text-4xl font-bold text-gray-900 mb-6 fade-up-delayed">
                 Supported living pathways that blend clinical care with homely comfort
-              </h2>
+              </Reveal>
               <p className="text-lg text-gray-600 mb-8">
                 We help people with complex needs sustain their tenancy and build stability through personalised
                 wraparound services.
@@ -64,10 +65,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Impact Film */}
-      <section className="relative my-20 fade-up">
+      <Reveal as="section" className="relative my-20 fade-up">
         <div className="relative w-full max-w-6xl mx-auto aspect-[16/9] overflow-hidden isolate rounded-[2.5rem] shadow-[0_30px_80px_rgba(7,19,19,0.35)]">
           <video
             src="/media/our-place.mp4"
@@ -96,17 +97,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Life at Unity Care Living */}
-      <section className="py-20 bg-gray-50 fade-up">
+      <Reveal as="section" className="py-20 bg-gray-50 fade-up">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-2">
             <div className="space-y-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-500">Life at Unity</p>
-              <h2 className="text-4xl font-bold text-gray-900 slide-in-left">
+              <Reveal as="h2" className="text-4xl font-bold text-gray-900 slide-in-left">
                 Homely spaces filled with warmth, purpose, and daily inspiration
-              </h2>
+              </Reveal>
               <p className="text-lg text-gray-600">
                 Residents enjoy beautifully designed accommodation, restorative wellbeing sessions, and uplifting communal
                 experiences that encourage friendships and personal growth.
@@ -124,12 +125,14 @@ export default function Home() {
             </div>
             <div className="grid gap-8 sm:grid-cols-2">
               <div className="relative h-80 sm:h-full overflow-hidden rounded-3xl shadow-xl pulse-slow">
-                <Image
-                  src="/homepage/home-2.png"
-                  alt="Residents enjoying a communal activity"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                <video
+                  src="/homepage/home-video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/homepage/home-2.png"
+                  className="absolute inset-0 h-full w-full object-cover object-center scale-110"
                 />
               </div>
               <div className="space-y-6">
@@ -155,10 +158,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Partnership Approach Section */}
-      <section className="relative py-24 fade-up">
+      <Reveal as="section" className="relative py-24 fade-up">
         <div className="absolute inset-0">
           <Image
             src="/slider/slide-3.png"
@@ -212,18 +215,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white fade-up">
+      <Reveal as="section" className="py-20 bg-white fade-up">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-12">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-500">Why choose us</p>
-                <h2 className="mt-3 text-4xl font-bold text-gray-900">
+                <Reveal
+                  as="h2"
+                  className="mt-3 text-4xl font-bold text-gray-900 slide-in-left"
+                >
                   Trusted expertise with a compassionate,<br className="hidden md:block" /> forward-thinking mindset
-                </h2>
+                </Reveal>
               </div>
               <Link
                 href="/about"
@@ -264,10 +270,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* Contact CTA Section */}
-      <section className="relative py-24 fade-up">
+      <Reveal as="section" className="relative py-24 fade-up">
         <div className="absolute inset-0">
           <Image
             src="/slider/slide-2.png"
@@ -303,7 +309,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
     </div>
   )
 }

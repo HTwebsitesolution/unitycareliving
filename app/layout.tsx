@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Unity Care Living - Our Space. Our Home.',
   description: 'Unity Care Living. Our Space. Our Home. A caring and nurturing place to call home. We provide exceptional supported accommodation for vulnerable adults.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

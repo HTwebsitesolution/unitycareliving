@@ -35,27 +35,35 @@ body {
     text-wrap: balance;
   }
 
-  .fade-up {
+  .fade-up,
+  .fade-up-delayed {
     opacity: 0;
     transform: translateY(20px);
+  }
+
+  .fade-up.animate {
     animation: fadeUp 0.9s ease-out forwards;
   }
 
-  .fade-up-delayed {
-    opacity: 0;
-    transform: translateY(24px);
+  .fade-up-delayed.animate {
     animation: fadeUp 0.9s ease-out forwards;
     animation-delay: 0.2s;
   }
 
   .fade-in {
     opacity: 0;
+  }
+
+  .fade-in.animate {
     animation: fadeIn 1s ease-out forwards;
   }
 
   .slide-in-left {
     opacity: 0;
     transform: translateX(-35px);
+  }
+
+  .slide-in-left.animate {
     animation: slideInLeft 0.9s ease-out forwards;
   }
 }

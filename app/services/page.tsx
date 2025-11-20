@@ -73,7 +73,7 @@ export default function Services() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-5">
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Person-first approach</p>
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl font-bold text-gray-900 reveal-center animate">
               Care plans that feel personal, practical, and hopeful
             </h2>
             <p className="text-lg text-gray-600">
@@ -134,7 +134,9 @@ export default function Services() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Core programmes</p>
-            <h2 className="text-4xl font-bold text-gray-900">Integrated services that evolve with each resident</h2>
+            <h2 className="text-4xl font-bold text-gray-900 zoom-in animate">
+              Integrated services that evolve with each resident
+            </h2>
             <p className="text-lg text-gray-600">
               By blending clinical care, life-skills coaching, and community participation, we create wraparound plans residents
               can sustain long after they move on.

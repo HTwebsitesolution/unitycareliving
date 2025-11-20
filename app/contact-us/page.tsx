@@ -1,6 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import Image from 'next/image'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
+
+import Reveal from '@/components/Reveal'
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -9,16 +12,15 @@ export default function ContactUs() {
     message: '',
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log('Form submitted:', formData)
     alert('Thank you for your message! We will get back to you soon.')
     setFormData({ name: '', email: '', message: '' })
@@ -26,28 +28,41 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-3">Contact Us</h1>
-          <p className="text-xl md:text-2xl text-center text-primary-100 font-semibold">Our Space. Our Home.</p>
+      <Reveal as="section" className="relative isolate overflow-hidden bg-gradient-to-r from-primary-700 to-primary-500 text-white fade-up">
+        <Image
+          src="/about/about-1.png"
+          alt="Unity Care Living welcoming environment"
+          fill
+          className="object-cover opacity-30"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/70 to-primary-600/70" />
+        <div className="relative container mx-auto px-4 py-24">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary-100">Get In Touch</p>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">Contact Us</h1>
+            <p className="text-xl md:text-2xl text-primary-100 font-semibold">Our Space. Our Home.</p>
+            <p className="text-lg text-primary-50 max-w-2xl mx-auto">
+              Whether you are a commissioner, care professional, or family member, our dedicated team is ready to explore how Unity Care Living can help.
+            </p>
+          </div>
         </div>
-      </section>
+      </Reveal>
 
-      {/* Contact Section */}
-      <section className="py-16">
+      <Reveal as="section" className="py-20 bg-white fade-up">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Get In Touch For All Enquiries</h2>
-              <p className="text-lg text-gray-600">
-                We&apos;re here to help. Send us a message and we&apos;ll respond as soon as possible.
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-500 mb-4">We&apos;re Here To Help</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Get In Touch For All Enquiries</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Send us a message and we&apos;ll respond as soon as possible. Our team is ready to answer your questions and discuss how we can support you or your loved ones.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div className="bg-white border border-primary-100 p-8 rounded-2xl shadow-[0px_15px_40px_rgba(67,95,93,0.08)]">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -106,14 +121,14 @@ export default function ContactUs() {
                 </form>
               </div>
 
-              {/* Contact Information */}
-              <div className="bg-gray-50 p-8 rounded-lg">
+              <div className="bg-gradient-to-br from-white to-primary-50/40 border border-primary-100 p-8 rounded-2xl shadow-[0px_15px_40px_rgba(67,95,93,0.08)]">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-700 mb-2">Address</h4>
                     <p className="text-gray-600">
-                      Your Address Here<br />
+                      Your Address Here
+                      <br />
                       Surrey, UK
                     </p>
                   </div>
@@ -171,10 +186,34 @@ export default function ContactUs() {
                 </div>
               </div>
             </div>
+
+            <Reveal className="mt-16 fade-up">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-primary-100 to-white blur-xl" aria-hidden />
+                <div className="relative">
+                  <Image
+                    src="/homepage/home-1.png"
+                    alt="Unity Care Living team ready to help"
+                    width={1200}
+                    height={600}
+                    className="h-[400px] md:h-[500px] w-full object-cover"
+                    priority={false}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-8 left-8 right-8 md:left-12 md:right-12">
+                    <div className="max-w-2xl">
+                      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/90 mb-2">Ready To Support You</p>
+                      <p className="text-2xl md:text-3xl font-bold text-white leading-tight">
+                        Our compassionate team is here to guide you through every step of your journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
-      </section>
+      </Reveal>
     </div>
   )
 }
-

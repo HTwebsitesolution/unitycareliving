@@ -19,9 +19,19 @@ const focusAreas = [
   },
 ]
 
+const specialistProgrammes = [
+  'Cooking classes',
+  'Family intervention program',
+  'Hoarding program',
+  'Behaviour activation program',
+  'Improving life skills program',
+  'Creative program',
+  'Tenancy sustainment training',
+]
+
 const programmes = [
-  'Clinical mental health support with psychiatrists, psychologists, and nurse practitioners.',
-  'Purpose-built accommodation ranging from studios to shared apartments with adaptive technology.',
+  'Clinical mental health and primary care support with psychiatrists, psychologists, nurse practitioners, and GP links.',
+  'Purpose-built accommodation with furnished en-suite rooms and adaptive technology.',
   'Group programmes covering trauma recovery, self-regulation, and peer support.',
   'Educational and vocational coaching with links to colleges, apprenticeships, and employers.',
   'Family and relationship services including mediation, supervised visits, and psychoeducation.',
@@ -103,8 +113,9 @@ export default function Services() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Specialist housing</p>
             <h2 className="text-4xl font-bold text-gray-900">Modern accommodation that balances calm with clinical rigour</h2>
             <p>
-              Apartments are furnished with adaptive technology, sensory lighting, and secure access, while communal lounges host
-              film nights, cooking classes, and wellbeing circles. Outdoor courtyards offer gardening projects and quiet time.
+              Furnished en-suite rooms are ready to move into with soft furnishings, WiFi, secure access, and therapeutic rooms.
+              Communal lounges host film nights, cooking classes, and wellbeing circles. Outdoor courtyards offer gardening projects
+              and quiet time.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -157,21 +168,27 @@ export default function Services() {
       </section>
 
       <section className="py-20 bg-primary-50">
-        <div className="container mx-auto px-4 grid gap-10 lg:grid-cols-2">
-          <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Group therapy & wellbeing</p>
-            <h2 className="text-4xl font-bold text-gray-900">Specialist groups that heal, skill-build, and connect</h2>
-            <p>
-              Residents can choose from trauma recovery circles, domestic abuse programmes, SHOUT emotional-awareness sessions,
-              anger management, and mindfulness groups. Creative arts, exercise therapy, and community outings bring balance and
-              joy.
-            </p>
-            <p>
-              Peer mentors with lived experience support each programme, helping residents develop confidence and
-              self-regulation while building friendships.
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Specialist</p>
+            <h2 className="text-4xl font-bold text-gray-900">Programmes that heal, skill-build, and connect</h2>
+            <p className="text-lg text-gray-600">
+              Residents can access structured specialist programmes delivered by our clinical and support teams, with peer mentors
+              helping build confidence, self-regulation, and lasting friendships.
             </p>
           </div>
-          <div className="grid gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+            {specialistProgrammes.map((programme) => (
+              <div
+                key={programme}
+                className="flex items-center gap-3 rounded-2xl border border-primary-100 bg-white p-5 shadow-sm"
+              >
+                <span className="text-primary-700 text-xl font-bold">✓</span>
+                <p className="text-gray-800 font-medium">{programme}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2 max-w-5xl mx-auto">
             <div className="relative h-72 rounded-3xl overflow-hidden shadow-xl">
               <Image
                 src="/services/service-6.png"
@@ -200,8 +217,9 @@ export default function Services() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Referrals & partnerships</p>
             <h2 className="text-4xl font-bold text-gray-900">Simple, transparent referral process for professionals</h2>
             <p>
-              We work closely with local authorities, NHS trusts, housing providers, and criminal justice partners. Each referral
-              receives a rapid response, detailed needs assessment, and collaborative placement planning.
+              We work closely with local authorities, National Health Service (NHS) trusts, housing providers, and criminal justice
+              partners. Each referral receives a rapid response, detailed needs assessment, collaborative placement planning, and a
+              move-on plan for every resident.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -214,7 +232,7 @@ export default function Services() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-700 text-xl font-bold">•</span>
-                <span>Transparent reporting, outcome tracking, and commissioner dashboards.</span>
+                <span>A move-on plan created for every resident, with transparent reporting for commissioners.</span>
               </li>
             </ul>
             <Link
@@ -244,8 +262,8 @@ export default function Services() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-100">Let’s talk</p>
             <h2 className="text-4xl font-bold">Ready to explore placements or bespoke packages?</h2>
             <p className="text-lg text-primary-50">
-              Our referrals team will tailor a guided tour, share outcome data, and co-design a pathway that matches the needs of
-              the people you support.
+              Our referrals team will tailor a guided tour and co-design a pathway that matches the needs of the people you
+              support.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

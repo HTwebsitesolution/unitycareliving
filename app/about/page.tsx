@@ -49,8 +49,8 @@ export default function About() {
                 <p className="text-sm uppercase tracking-[0.2em]">On-site team</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-white">92%</p>
-                <p className="text-sm uppercase tracking-[0.2em]">Resident wellbeing boost</p>
+                <p className="text-4xl font-bold text-white">100%</p>
+                <p className="text-sm uppercase tracking-[0.2em]">Person-centred plans</p>
               </div>
             </div>
           </div>
@@ -122,9 +122,8 @@ export default function About() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Spaces with purpose</p>
             <h2 className="text-4xl font-bold text-gray-900">Beautiful homes designed for stability and growth</h2>
             <p>
-              From furnished studios to shared apartments, every apartment is move-in ready with soft furnishings, smart
-              technology, secure access, and therapeutic lighting. Communal lounges host film nights, cooking classes, and
-              support circles, while our outdoor courtyards provide quiet moments or gardening projects.
+              From furnished en-suite rooms with soft furnishings, ready to move into. WiFi, secure access, therapeutic rooms,
+              communal lounge, and outdoor courtyards for quiet moments or gardening projects.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -133,11 +132,11 @@ export default function About() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-700 text-xl font-bold">•</span>
-                <span>Dedicated wellbeing studio for mindfulness, physiotherapy, and creative expression.</span>
+                <span>Therapeutic rooms for counselling, mindfulness, physiotherapy, and creative expression.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-700 text-xl font-bold">•</span>
-                <span>Digital concierge app for maintenance, feedback, and community announcements.</span>
+                <span>Communal lounge for film nights, cooking classes, and support circles.</span>
               </li>
             </ul>
           </div>
@@ -150,9 +149,9 @@ export default function About() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-500">Care team</p>
             <h2 className="text-4xl font-bold text-gray-900">Multidisciplinary experts working in true partnership</h2>
             <p>
-              Our team includes registered mental health nurses, positive behaviour specialists, peer mentors, counsellors,
-              and tenancy sustainment officers. Weekly MDT reviews ensure every resident has a circle of support focused on
-              progress, not problems.
+              Our team includes registered mental health nurses, an experienced social worker, positive behaviour specialists,
+              peer mentors, counsellors, and tenancy sustainment officers. Weekly MDT reviews ensure every resident has a circle
+              of support focused on progress, not problems.
             </p>
             <p>
               Staff receive continuous development in trauma-informed care, safeguarding, cultural competency, and co-production
@@ -201,9 +200,9 @@ export default function About() {
             <p className="text-sm uppercase tracking-[0.3em] text-primary-100">Partnerships</p>
             <h2 className="text-4xl font-bold">Working side-by-side with commissioners, clinicians, and families</h2>
             <p className="text-lg text-primary-50">
-              Local authorities, NHS trusts, housing associations, and charities trust Unity Care Living to deliver responsive
-              placements that keep individuals safe and on track. We provide transparent reporting, regular outcomes reviews, and
-              open communication with everyone involved.
+              Local authorities, National Health Service (NHS) trusts, housing associations, and charities trust Unity Care Living
+              to deliver responsive placements that keep individuals safe and on track. We create a move-on plan for every
+              resident and provide transparent reporting with open communication for everyone involved.
             </p>
           </div>
         </div>

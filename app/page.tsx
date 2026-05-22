@@ -20,12 +20,12 @@ export default function Home() {
                 Supported living pathways that blend clinical care with homely comfort
               </Reveal>
               <p className="text-lg text-gray-600 mb-8">
-                We help people with complex needs sustain their tenancy and build stability through personalised
-                wraparound services.
+                We help people with complex needs develop and sustain the skills to maintain their tenancy and build
+                personalised wraparound services.
               </p>
               <div className="space-y-4">
                 {[
-                  'Person-centred housing support tailored to individual circumstances',
+                  'Person-centred care and housing support tailored to individual circumstances',
                   'Mental health crisis intervention and ongoing emotional wellbeing assistance',
                   'Daily living skills development to promote long-term independence',
                   'Tenancy sustainment support to prevent homelessness',
@@ -90,7 +90,7 @@ export default function Home() {
                   Step inside Unity Care Living and feel the calm, homely energy residents experience every day.
                 </h3>
                 <p className="text-lg text-primary-50">
-                  This short film captures the warmth of our community, the dedication of our teams, and the sense of safety
+                  Watch our short film to see the warmth of our community, the dedication of our teams, and the sense of safety
                   that comes from truly supported living.
                 </p>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {[
                   { label: 'Family meetings and transparent updates', accent: 'Family focused' },
-                  { label: 'Integrated working with NHS, councils & charities', accent: 'Multi-agency' },
+                  { label: 'Integrated working with the National Health Service (NHS), councils & charities', accent: 'Multi-agency' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-primary-100 p-5">
                     <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary-500">{item.accent}</p>
@@ -207,9 +207,10 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/50" />
               <div className="absolute bottom-8 left-8 right-8 rounded-2xl bg-white/90 p-6 backdrop-blur">
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-500">Outcome focused</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-500">Co-produced care</p>
                 <p className="mt-2 text-lg text-gray-800">
-                  92% of residents report improved wellbeing and sense of safety within their first three months.
+                  We work alongside residents, carers, and families to shape support that reflects each person&apos;s goals and
+                  circumstances.
                 </p>
               </div>
             </div>
@@ -230,6 +231,10 @@ export default function Home() {
                 >
                   Trusted expertise with a compassionate,<br className="hidden md:block" /> forward-thinking mindset
                 </Reveal>
+                <p className="mt-4 text-lg text-gray-600 max-w-3xl">
+                  Embracing changes in social care and new legislation, with an excellent understanding of safeguarding and
+                  issues relating to violence affecting our communities.
+                </p>
               </div>
               <Link
                 href="/about"
@@ -242,7 +247,7 @@ export default function Home() {
               {[
                 {
                   title: 'Specialist Clinical Team',
-                  copy: 'Experienced nurses, behavioural specialists, and support coaches working together every day.',
+                  copy: 'Experienced nurses, an experienced social worker, behavioural specialists, and support coaches working together every day.',
                 },
                 {
                   title: 'Personal Learning Journeys',

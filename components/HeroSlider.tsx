@@ -54,7 +54,7 @@ const slideData: Slide[] = [
     eyebrow: 'Partnerships & Referrals',
     title: 'Working Alongside Local Authorities & Health Partners',
     description:
-      'Seamless referral journeys with transparent collaboration to ensure the best outcomes for residents, families, and commissioners.',
+      'Seamless referral journeys with transparent collaboration for residents, families, and commissioners across local authorities and the National Health Service (NHS).',
     cta: {
       label: 'Refer A Resident',
       href: '/contact-us',
